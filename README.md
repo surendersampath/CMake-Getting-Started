@@ -1,4 +1,4 @@
-#Cmake Project Getting Started for C project.
+#Cmake Project Getting Started for C project. ![CI][]
 
 # Git Set Cmake!
 
