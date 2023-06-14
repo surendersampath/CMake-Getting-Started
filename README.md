@@ -1,0 +1,1 @@
+#Cmake Project Getting Started for C project.
