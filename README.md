@@ -41,5 +41,9 @@ Git.
 3. Run the Executable.
 
 	   ./MyProject.exe
-
+    
+4. This Command come in Handly to Delete all the files inside the build folder. (Windows and Linux)
 	
+        del /q /s build\*
+        rm -rf build/*
+

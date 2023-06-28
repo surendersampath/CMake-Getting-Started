@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.0)
 
 project(MyProject)
 
+include(CTest)
+
+
 # Set C standard
 set(CMAKE_C_STANDARD 11)
 
@@ -10,3 +13,13 @@ add_executable(${PROJECT_NAME} src/main.c)
 
 # Include headers
 target_include_directories(${PROJECT_NAME} PUBLIC include)
+
+# Add test executable
+add_executable(tests test/test_square.c unity/unity.c )
+
+# Include directories
+target_include_directories(${PROJECT_NAME} PUBLIC unity)
+target_include_directories(tests PUBLIC include unity)
+
+# Link Unity Test framework
+target_link_libraries(tests PRIVATE ${CMAKE_DL_LIBS})
