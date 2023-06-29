@@ -1,2 +1,0 @@
-/usr/bin/ar qc libModule.a CMakeFiles/Module.dir/src/module1.c.o
-/usr/bin/ranlib libModule.a
