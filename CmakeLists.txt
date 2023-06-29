@@ -17,7 +17,7 @@ add_subdirectory(module_math)
 
 # Specify the directories to include for the module library and its dependencies
 include_directories(
-        test_module/include
+        module_math/include
 )
 
 # Create the main application executable using the defined source files

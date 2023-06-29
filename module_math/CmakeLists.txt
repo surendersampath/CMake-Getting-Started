@@ -4,7 +4,7 @@ project(module_1)
 
 # Set the header files for the subdirectory
 set(HEADERS
-    include/module1.h
+    include/module_math.h
 )
 
 # Include header for the module.
@@ -12,12 +12,12 @@ include_directories(include)
 
 # Source files for the module
 set(MODULE_SOURCES
-        src/module1.c
+        src/module_math.c
 )
 
 # Source files for the test
 set(TEST_SOURCES
-        test/module1_test.c
+        test/module_test.c
 )
 
 # Create the module library
