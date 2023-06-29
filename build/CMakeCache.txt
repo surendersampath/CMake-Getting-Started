@@ -215,18 +215,6 @@ Get-Started-With-Cmake_BINARY_DIR:STATIC=/workspaces/Cmake Getting Started/build
 //Value Computed by CMake
 Get-Started-With-Cmake_SOURCE_DIR:STATIC=/workspaces/Cmake Getting Started
 
-//Value Computed by CMake
-MyApplication_BINARY_DIR:STATIC=/workspaces/Cmake Getting Started/build
-
-//Value Computed by CMake
-MyApplication_SOURCE_DIR:STATIC=/workspaces/Cmake Getting Started
-
-//Value Computed by CMake
-MyProject_BINARY_DIR:STATIC=/workspaces/Cmake Getting Started/build
-
-//Value Computed by CMake
-MyProject_SOURCE_DIR:STATIC=/workspaces/Cmake Getting Started
-
 
 ########################
 # INTERNAL cache entries

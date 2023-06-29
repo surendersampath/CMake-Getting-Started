@@ -70,7 +70,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = "/workspaces/Cmake Getting Started"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/workspaces/Cmake Getting Started/unity"
+CMAKE_BINARY_DIR = "/workspaces/Cmake Getting Started"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,14 +99,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/Cmake Getting Started/unity/CMakeFiles" "/workspaces/Cmake Getting Started/unity//CMakeFiles/progress.marks"
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/Cmake Getting Started/unity/CMakeFiles" 0
+	cd "/workspaces/Cmake Getting Started" && $(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/Cmake Getting Started/CMakeFiles" "/workspaces/Cmake Getting Started/unity//CMakeFiles/progress.marks"
+	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unity/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/Cmake Getting Started/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unity/clean
 .PHONY : clean
 
 # The main clean target
@@ -116,84 +116,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unity/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unity/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/workspaces/Cmake Getting Started" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named MyProject
+# Convenience name for target.
+unity/CMakeFiles/Unity.dir/rule:
+	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unity/CMakeFiles/Unity.dir/rule
+.PHONY : unity/CMakeFiles/Unity.dir/rule
 
-# Build rule for target.
-MyProject: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyProject
-.PHONY : MyProject
+# Convenience name for target.
+Unity: unity/CMakeFiles/Unity.dir/rule
 
-# fast build rule for target.
-MyProject/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/build
-.PHONY : MyProject/fast
-
-#=============================================================================
-# Target rules for targets named Unity
-
-# Build rule for target.
-Unity: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Unity
 .PHONY : Unity
 
 # fast build rule for target.
 Unity/fast:
-	$(MAKE) $(MAKESILENT) -f unity/CMakeFiles/Unity.dir/build.make unity/CMakeFiles/Unity.dir/build
+	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f unity/CMakeFiles/Unity.dir/build.make unity/CMakeFiles/Unity.dir/build
 .PHONY : Unity/fast
 
-#=============================================================================
-# Target rules for targets named Module
+unity.o: unity.c.o
 
-# Build rule for target.
-Module: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Module
-.PHONY : Module
-
-# fast build rule for target.
-Module/fast:
-	$(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/Module.dir/build.make test_module/CMakeFiles/Module.dir/build
-.PHONY : Module/fast
-
-src/main.o: src/main.c.o
-
-.PHONY : src/main.o
+.PHONY : unity.o
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.c.o
-.PHONY : src/main.c.o
+unity.c.o:
+	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f unity/CMakeFiles/Unity.dir/build.make unity/CMakeFiles/Unity.dir/unity.c.o
+.PHONY : unity.c.o
 
-src/main.i: src/main.c.i
+unity.i: unity.c.i
 
-.PHONY : src/main.i
+.PHONY : unity.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.c.i
-.PHONY : src/main.c.i
+unity.c.i:
+	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f unity/CMakeFiles/Unity.dir/build.make unity/CMakeFiles/Unity.dir/unity.c.i
+.PHONY : unity.c.i
 
-src/main.s: src/main.c.s
+unity.s: unity.c.s
 
-.PHONY : src/main.s
+.PHONY : unity.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.c.s
-.PHONY : src/main.c.s
+unity.c.s:
+	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f unity/CMakeFiles/Unity.dir/build.make unity/CMakeFiles/Unity.dir/unity.c.s
+.PHONY : unity.c.s
 
 # Help Target
 help:
@@ -203,12 +179,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Module"
-	@echo "... MyProject"
 	@echo "... Unity"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... unity.o"
+	@echo "... unity.i"
+	@echo "... unity.s"
 .PHONY : help
 
 
@@ -220,6 +194,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/workspaces/Cmake Getting Started" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

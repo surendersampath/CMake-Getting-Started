@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/workspaces/Cmake Getting Started")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/workspaces/Cmake Getting Started/test_module")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/workspaces/Cmake Getting Started")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)
