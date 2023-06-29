@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "project.h": "c",
-        "unity.h": "c"
+        "unity.h": "c",
+        "module1.h": "c"
     }
 }

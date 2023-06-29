@@ -1,0 +1,4 @@
+C:/Users/surenderdell/OneDrive - essensys/Desktop/Cmake Getting Started/test/CMakeFiles/MyProject.dir
+C:/Users/surenderdell/OneDrive - essensys/Desktop/Cmake Getting Started/test/CMakeFiles/ModuleTest.dir
+C:/Users/surenderdell/OneDrive - essensys/Desktop/Cmake Getting Started/test/CMakeFiles/ALL_BUILD.dir
+C:/Users/surenderdell/OneDrive - essensys/Desktop/Cmake Getting Started/test/CMakeFiles/ZERO_CHECK.dir

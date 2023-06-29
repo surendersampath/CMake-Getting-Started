@@ -14,9 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Build the testing tree.
-BUILD_TESTING:BOOL=ON
-
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/lib.exe
 
@@ -24,24 +21,6 @@ CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Too
 // supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything
 // else will be ignored.
 CMAKE_CONFIGURATION_TYPES:STRING=Debug;Release;MinSizeRel;RelWithDebInfo
-
-//Flags used by the CXX compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=/DWIN32 /D_WINDOWS /W3 /GR /EHsc
-
-//Flags used by the CXX compiler during DEBUG builds.
-CMAKE_CXX_FLAGS_DEBUG:STRING=/MDd /Zi /Ob0 /Od /RTC1
-
-//Flags used by the CXX compiler during MINSIZEREL builds.
-CMAKE_CXX_FLAGS_MINSIZEREL:STRING=/MD /O1 /Ob1 /DNDEBUG
-
-//Flags used by the CXX compiler during RELEASE builds.
-CMAKE_CXX_FLAGS_RELEASE:STRING=/MD /O2 /Ob2 /DNDEBUG
-
-//Flags used by the CXX compiler during RELWITHDEBINFO builds.
-CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=/MD /Zi /O2 /Ob1 /DNDEBUG
-
-//Libraries linked by default with all C++ applications.
-CMAKE_CXX_STANDARD_LIBRARIES:STRING=kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=/DWIN32 /D_WINDOWS /W3
@@ -157,10 +136,10 @@ CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //If set, runtime paths are not added when installing shared libraries,
 // but are added when building.
-CMAKE_SKIP_INSTALL_RPATH:BOOL=OFF
+CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
 
 //If set, runtime paths are not added when using shared libraries.
-CMAKE_SKIP_RPATH:BOOL=OFF
+CMAKE_SKIP_RPATH:BOOL=NO
 
 //Flags used by the linker during the creation of static libraries
 // during all build types.
@@ -186,35 +165,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
-CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
-
-//Path to the coverage program that CTest uses for performing coverage
-// inspection
-COVERAGE_COMMAND:FILEPATH=C:/MinGW/bin/gcov.exe
-
-//Extra command line flags to pass to the coverage tool
-COVERAGE_EXTRA_FLAGS:STRING=-l
-
-//How many times to retry timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_COUNT:STRING=3
-
-//How long to wait between timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_DELAY:STRING=5
-
-//Maximum time allowed before CTest will kill the test.
-DART_TESTING_TIMEOUT:STRING=1500
-
-//Path to a program.
-GITCOMMAND:FILEPATH=C:/Program Files/Git/cmd/git.exe
-
-//Command to build the project
-MAKECOMMAND:STRING="C:\Program Files\CMake\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
-
-//Path to the memory checking command, used for memory error detection.
-MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
-
-//File that contains suppressions for the memory checker
-MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
+CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
 MyProject_BINARY_DIR:STATIC=C:/Users/surenderdell/OneDrive - essensys/Desktop/Cmake Getting Started/build
@@ -224,9 +175,6 @@ MyProject_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 MyProject_SOURCE_DIR:STATIC=C:/Users/surenderdell/OneDrive - essensys/Desktop/Cmake Getting Started
-
-//Name of the computer/site where compile is being run
-SITE:STRING=DESKTOP-8GIJ8GL
 
 
 ########################
@@ -240,29 +188,15 @@ CMAKE_CACHEFILE_DIR:INTERNAL=c:/Users/surenderdell/OneDrive - essensys/Desktop/C
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=26
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=27
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=4
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=C:/Program Files/CMake/bin/cmake.exe
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=C:/Program Files/CMake/bin/cpack.exe
-//ADVANCED property for variable: CMAKE_CTEST_COMMAND
-CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=C:/Program Files/CMake/bin/ctest.exe
-//ADVANCED property for variable: CMAKE_CXX_FLAGS
-CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
-CMAKE_CXX_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS_MINSIZEREL
-CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS_RELEASE
-CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
-CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_STANDARD_LIBRARIES
-CMAKE_CXX_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -334,7 +268,7 @@ CMAKE_RC_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_FLAGS_RELWITHDEBINFO
 CMAKE_RC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=C:/Program Files/CMake/share/cmake-3.26
+CMAKE_ROOT:INTERNAL=C:/Program Files/CMake/share/cmake-3.27
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -361,24 +295,4 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_COMMAND
-COVERAGE_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
-COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
-CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
-CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: DART_TESTING_TIMEOUT
-DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GITCOMMAND
-GITCOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MAKECOMMAND
-MAKECOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_COMMAND
-MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
-MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SITE
-SITE-ADVANCED:INTERNAL=1
 
