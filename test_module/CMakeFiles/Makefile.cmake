@@ -49,7 +49,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/MyProject.dir/DependInfo.cmake"
+  "CMakeFiles/Application.dir/DependInfo.cmake"
   "unity/CMakeFiles/Unity.dir/DependInfo.cmake"
   "test_module/CMakeFiles/ModuleTest.dir/DependInfo.cmake"
   "test_module/CMakeFiles/Module.dir/DependInfo.cmake"

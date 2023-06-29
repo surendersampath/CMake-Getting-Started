@@ -221,6 +221,12 @@ MyProject_BINARY_DIR:STATIC=/workspaces/Cmake Getting Started/test_module
 //Value Computed by CMake
 MyProject_SOURCE_DIR:STATIC=/workspaces/Cmake Getting Started
 
+//Value Computed by CMake
+module_1_BINARY_DIR:STATIC=/workspaces/Cmake Getting Started/test_module/test_module
+
+//Value Computed by CMake
+module_1_SOURCE_DIR:STATIC=/workspaces/Cmake Getting Started/test_module
+
 
 ########################
 # INTERNAL cache entries

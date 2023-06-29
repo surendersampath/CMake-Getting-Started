@@ -21,7 +21,9 @@ set(TEST_SOURCES
 )
 
 # Create the module library
-add_library(Module ${MODULE_SOURCES} ${HEADERS})
+add_library(Module STATIC ${MODULE_SOURCES} ${HEADERS})
+
+target_include_directories(Module PUBLIC ${HEADERS})
 
 # Create the test executable for running unit tests for the module.
 add_executable(ModuleTest ${TEST_SOURCES})

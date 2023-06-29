@@ -1,6 +1,6 @@
 /workspaces/Cmake Getting Started/test_module/CMakeFiles/rebuild_cache.dir
 /workspaces/Cmake Getting Started/test_module/CMakeFiles/edit_cache.dir
-/workspaces/Cmake Getting Started/test_module/CMakeFiles/MyProject.dir
+/workspaces/Cmake Getting Started/test_module/CMakeFiles/Application.dir
 /workspaces/Cmake Getting Started/test_module/unity/CMakeFiles/rebuild_cache.dir
 /workspaces/Cmake Getting Started/test_module/unity/CMakeFiles/edit_cache.dir
 /workspaces/Cmake Getting Started/test_module/unity/CMakeFiles/Unity.dir

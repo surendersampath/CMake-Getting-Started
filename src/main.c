@@ -4,5 +4,5 @@
 void main()
 {
     printf("\n Hello From Source Main.c");
-    printf( "\n Square Root of 5 is %d", square(5));
+    printf( "\n Square Root of 7 is %d", square(7));
 }

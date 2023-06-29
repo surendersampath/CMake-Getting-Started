@@ -21,9 +21,9 @@ include_directories(
 )
 
 # Create the main application executable using the defined source files
-add_executable(MyProject ${MAIN_SOURCES})
+add_executable(Application ${MAIN_SOURCES})
 
 # Link the main application with the module library to enable access to its functions
-target_link_libraries(MyProject Module)
+target_link_libraries(Application Module)
 
 

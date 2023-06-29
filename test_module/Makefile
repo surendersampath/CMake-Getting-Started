@@ -70,7 +70,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = "/workspaces/Cmake Getting Started"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/workspaces/Cmake Getting Started"
+CMAKE_BINARY_DIR = "/workspaces/Cmake Getting Started/test_module"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,14 +99,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/workspaces/Cmake Getting Started" && $(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/Cmake Getting Started/CMakeFiles" "/workspaces/Cmake Getting Started/test_module//CMakeFiles/progress.marks"
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_module/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/Cmake Getting Started/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/Cmake Getting Started/test_module/CMakeFiles" "/workspaces/Cmake Getting Started/test_module//CMakeFiles/progress.marks"
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/Cmake Getting Started/test_module/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_module/clean
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -116,102 +116,97 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_module/preinstall
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_module/preinstall
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/workspaces/Cmake Getting Started" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-test_module/CMakeFiles/ModuleTest.dir/rule:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_module/CMakeFiles/ModuleTest.dir/rule
-.PHONY : test_module/CMakeFiles/ModuleTest.dir/rule
+#=============================================================================
+# Target rules for targets named Application
 
-# Convenience name for target.
-ModuleTest: test_module/CMakeFiles/ModuleTest.dir/rule
+# Build rule for target.
+Application: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Application
+.PHONY : Application
 
+# fast build rule for target.
+Application/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/build
+.PHONY : Application/fast
+
+#=============================================================================
+# Target rules for targets named Unity
+
+# Build rule for target.
+Unity: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Unity
+.PHONY : Unity
+
+# fast build rule for target.
+Unity/fast:
+	$(MAKE) $(MAKESILENT) -f unity/CMakeFiles/Unity.dir/build.make unity/CMakeFiles/Unity.dir/build
+.PHONY : Unity/fast
+
+#=============================================================================
+# Target rules for targets named ModuleTest
+
+# Build rule for target.
+ModuleTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ModuleTest
 .PHONY : ModuleTest
 
 # fast build rule for target.
 ModuleTest/fast:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/ModuleTest.dir/build.make test_module/CMakeFiles/ModuleTest.dir/build
+	$(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/ModuleTest.dir/build.make test_module/CMakeFiles/ModuleTest.dir/build
 .PHONY : ModuleTest/fast
 
-# Convenience name for target.
-test_module/CMakeFiles/Module.dir/rule:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_module/CMakeFiles/Module.dir/rule
-.PHONY : test_module/CMakeFiles/Module.dir/rule
+#=============================================================================
+# Target rules for targets named Module
 
-# Convenience name for target.
-Module: test_module/CMakeFiles/Module.dir/rule
-
+# Build rule for target.
+Module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Module
 .PHONY : Module
 
 # fast build rule for target.
 Module/fast:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/Module.dir/build.make test_module/CMakeFiles/Module.dir/build
+	$(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/Module.dir/build.make test_module/CMakeFiles/Module.dir/build
 .PHONY : Module/fast
 
-src/module1.o: src/module1.c.o
+src/main.o: src/main.c.o
 
-.PHONY : src/module1.o
-
-# target to build an object file
-src/module1.c.o:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/Module.dir/build.make test_module/CMakeFiles/Module.dir/src/module1.c.o
-.PHONY : src/module1.c.o
-
-src/module1.i: src/module1.c.i
-
-.PHONY : src/module1.i
-
-# target to preprocess a source file
-src/module1.c.i:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/Module.dir/build.make test_module/CMakeFiles/Module.dir/src/module1.c.i
-.PHONY : src/module1.c.i
-
-src/module1.s: src/module1.c.s
-
-.PHONY : src/module1.s
-
-# target to generate assembly for a file
-src/module1.c.s:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/Module.dir/build.make test_module/CMakeFiles/Module.dir/src/module1.c.s
-.PHONY : src/module1.c.s
-
-test/module1_test.o: test/module1_test.c.o
-
-.PHONY : test/module1_test.o
+.PHONY : src/main.o
 
 # target to build an object file
-test/module1_test.c.o:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/ModuleTest.dir/build.make test_module/CMakeFiles/ModuleTest.dir/test/module1_test.c.o
-.PHONY : test/module1_test.c.o
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-test/module1_test.i: test/module1_test.c.i
+src/main.i: src/main.c.i
 
-.PHONY : test/module1_test.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-test/module1_test.c.i:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/ModuleTest.dir/build.make test_module/CMakeFiles/ModuleTest.dir/test/module1_test.c.i
-.PHONY : test/module1_test.c.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-test/module1_test.s: test/module1_test.c.s
+src/main.s: src/main.c.s
 
-.PHONY : test/module1_test.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-test/module1_test.c.s:
-	cd "/workspaces/Cmake Getting Started" && $(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/ModuleTest.dir/build.make test_module/CMakeFiles/ModuleTest.dir/test/module1_test.c.s
-.PHONY : test/module1_test.c.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -221,14 +216,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Application"
 	@echo "... Module"
 	@echo "... ModuleTest"
-	@echo "... src/module1.o"
-	@echo "... src/module1.i"
-	@echo "... src/module1.s"
-	@echo "... test/module1_test.o"
-	@echo "... test/module1_test.i"
-	@echo "... test/module1_test.s"
+	@echo "... Unity"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
@@ -240,6 +234,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/workspaces/Cmake Getting Started" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
