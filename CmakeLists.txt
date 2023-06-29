@@ -13,7 +13,7 @@ set(MAIN_SOURCES
 add_subdirectory(unity)
 
 # Include the subdirectory for the module library (test_module)
-add_subdirectory(test_module)
+add_subdirectory(module_math)
 
 # Specify the directories to include for the module library and its dependencies
 include_directories(

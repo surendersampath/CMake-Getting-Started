@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "module1.h"
+#include "module_math.h"
 
 void main()
 {
-    printf("\n Hello From Source Main.c");
-    printf( "\n Square Root of 7 is %d", square(7));
+    printf("\n Hello From Source Main.c \n");
+    printf( "\n Square Root of 7 is %d \n", square(7));
 }
