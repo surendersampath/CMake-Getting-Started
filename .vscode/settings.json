@@ -1,0 +1,28 @@
+{
+    "files.associations": {
+        "project.h": "c",
+        "unity.h": "c",
+        "stdio.h": "c",
+        "module_math.h": "c"
+    },
+
+    "actionButtons": {
+        "reloadButton": "♻️", /* Custom reload button text */
+        "defaultColor": "#ff0034", /* Can also use string color names */
+        "loadNpmCommands": false, /* Disables automatic generation of actions for npm commands */
+        "commands": [
+            {
+                "cwd": "/workspaces/Cmake Getting Started/build", /* Terminal initial folder */
+                "name": "CMake Build",
+                "color": "Red",
+                "command": "cmake --build . --config Debug", /* Custom CMake build command */
+            },
+        ]
+    }
+
+}
+
+
+
+
+  

@@ -1,0 +1,8 @@
+# Create a library target for the Unity framework
+add_library(Unity STATIC unity.c unity_internals.h unity.h)
+
+# Specify the include directories for the Unity framework
+target_include_directories(Unity PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+# Set the desired C standard for the Unity library
+set_target_properties(Unity PROPERTIES C_STANDARD 11)

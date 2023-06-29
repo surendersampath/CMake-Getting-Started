@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/Cmake Getting Started/unity/unity.c
+unity.h
+/workspaces/Cmake Getting Started/unity/unity.h
+
+/workspaces/Cmake Getting Started/unity/unity.h
+unity_internals.h
+/workspaces/Cmake Getting Started/unity/unity_internals.h
+
+/workspaces/Cmake Getting Started/unity/unity_internals.h
+unity_config.h
+/workspaces/Cmake Getting Started/unity/unity_config.h
+setjmp.h
+-
+math.h
+-
+stddef.h
+-
+stdarg.h
+-
+stdint.h
+-
+limits.h
+-
+sdkddkver.h
+-
+stdnoreturn.h
+-
+stdio.h
+-
+stdio.h
+-
+time.h
+-
+time.h
+-
+
