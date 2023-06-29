@@ -54,3 +54,25 @@ Git.
     In traditional CMake projects, a single CMakeLists.txt file is used to define the entire project's configuration, including source files, build options, and dependencies. However, as projects grow larger and more complex, maintaining a monolithic CMakeLists.txt file becomes challenging.
 
     HCM addresses this challenge by introducing a hierarchy of CMakeLists.txt files, where each subdirectory of the project contains its own CMakeLists.txt file. The top-level CMakeLists.txt file serves as the entry point for the entire project and includes or subdirectories, each with its own CMakeLists.txt file.
+
+
+
+    - root
+  |- CMakeLists.txt
+  |- unity
+  |   |- CMakeLists.txt (for unity)
+  |   |- unity.c
+  |   |- unity.h
+  |   |- unity_internals.h
+  |
+  |- test_module
+      |- CMakeLists.txt (for test_module)
+      |- src
+      |   |- main.c
+      |
+      |- include
+      |   |- module.h
+      |
+      |- test
+          |- CMakeLists.txt (not necessary)
+          |- unit_tests.c

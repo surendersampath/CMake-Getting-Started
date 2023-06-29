@@ -1,33 +1,23 @@
 cmake_minimum_required(VERSION 3.12)
-project(MyProject C)
+project( Get-Started-With-Cmake )
 
 # Set C standard
 set(CMAKE_C_STANDARD 11)
-
-# Include directories
-include_directories(
-        test_module/include
-        unity
-)
 
 # Source files for the main application
 set(MAIN_SOURCES
         src/main.c
 )
 
-# Source files for the module
-set(MODULE_SOURCES
-        test_module/src/module1.c
-)
+# Create the test executable - This is to for unit testing our module.
+add_subdirectory(unity)
 
-# Source files for the test
-set(TEST_SOURCES
-        test_module/test/module1_test.c
-        unity/unity.c
-)
+# Create the test executable - This is to for unit testing our module.
+add_subdirectory(test_module)
 
-# Create the main application executable
+# Create the main application executable - You can consider this as running main.c
 add_executable(MyProject ${MAIN_SOURCES})
 
-# Create the test executable
-add_executable(ModuleTest ${MODULE_SOURCES} ${TEST_SOURCES})
+# Link the main application with the test module library
+target_link_libraries(MyProject Module)
+

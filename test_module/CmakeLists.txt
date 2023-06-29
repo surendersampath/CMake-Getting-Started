@@ -1,16 +1,39 @@
-cmake_minimum_required(VERSION 3.12)
-project(test_module)
+# # Set the path to the root directory
+# set(ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
-# Set C standard
-set(CMAKE_C_STANDARD 11)
+# # Set the path to the Unity directory
+# set(UNITY_DIR ${ROOT_DIR}/unity)
 
-# Include directories
-include_directories(include)
 
-# Source files
-set(SOURCES
-        src/module.c
+# Check if the Unity directory exists
+# if(EXISTS ${UNITY_DIR})
+#     # Add the Unity subdirectory with a binary directory
+#     add_subdirectory(${UNITY_DIR} unity_build)
+#     message(FATAL_ERROR "Found it.")
+# else()
+#     message(FATAL_ERROR "Unity directory not found: ${UNITY_DIR}")
+# endif()
+
+
+# Source files for the module
+set(MODULE_SOURCES
+        src/module1.c
 )
 
-# Create the executable
-add_executable(${PROJECT_NAME} ${SOURCES})
+# Include header for the module
+include_directories(include)
+
+
+# Source files for the test
+set(TEST_SOURCES
+        test/module1_test.c
+)
+
+# Create the module library
+add_library(Module ${MODULE_SOURCES})
+
+# Create the test executable for running unit tests for the module.
+add_executable(ModuleTest ${TEST_SOURCES})
+
+# Link the module library to the test executable
+target_link_libraries(ModuleTest Module Unity)

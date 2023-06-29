@@ -130,19 +130,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ModuleTest
-
-# Build rule for target.
-ModuleTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ModuleTest
-.PHONY : ModuleTest
-
-# fast build rule for target.
-ModuleTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/build
-.PHONY : ModuleTest/fast
-
-#=============================================================================
 # Target rules for targets named MyProject
 
 # Build rule for target.
@@ -154,6 +141,45 @@ MyProject: cmake_check_build_system
 MyProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/build
 .PHONY : MyProject/fast
+
+#=============================================================================
+# Target rules for targets named Unity
+
+# Build rule for target.
+Unity: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Unity
+.PHONY : Unity
+
+# fast build rule for target.
+Unity/fast:
+	$(MAKE) $(MAKESILENT) -f unity/CMakeFiles/Unity.dir/build.make unity/CMakeFiles/Unity.dir/build
+.PHONY : Unity/fast
+
+#=============================================================================
+# Target rules for targets named ModuleTest
+
+# Build rule for target.
+ModuleTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ModuleTest
+.PHONY : ModuleTest
+
+# fast build rule for target.
+ModuleTest/fast:
+	$(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/ModuleTest.dir/build.make test_module/CMakeFiles/ModuleTest.dir/build
+.PHONY : ModuleTest/fast
+
+#=============================================================================
+# Target rules for targets named Module
+
+# Build rule for target.
+Module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Module
+.PHONY : Module
+
+# fast build rule for target.
+Module/fast:
+	$(MAKE) $(MAKESILENT) -f test_module/CMakeFiles/Module.dir/build.make test_module/CMakeFiles/Module.dir/build
+.PHONY : Module/fast
 
 src/main.o: src/main.c.o
 
@@ -182,87 +208,6 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/module1.o: src/module1.c.o
-
-.PHONY : src/module1.o
-
-# target to build an object file
-src/module1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/src/module1.c.o
-.PHONY : src/module1.c.o
-
-src/module1.i: src/module1.c.i
-
-.PHONY : src/module1.i
-
-# target to preprocess a source file
-src/module1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/src/module1.c.i
-.PHONY : src/module1.c.i
-
-src/module1.s: src/module1.c.s
-
-.PHONY : src/module1.s
-
-# target to generate assembly for a file
-src/module1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/src/module1.c.s
-.PHONY : src/module1.c.s
-
-test/module1_test.o: test/module1_test.c.o
-
-.PHONY : test/module1_test.o
-
-# target to build an object file
-test/module1_test.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/test/module1_test.c.o
-.PHONY : test/module1_test.c.o
-
-test/module1_test.i: test/module1_test.c.i
-
-.PHONY : test/module1_test.i
-
-# target to preprocess a source file
-test/module1_test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/test/module1_test.c.i
-.PHONY : test/module1_test.c.i
-
-test/module1_test.s: test/module1_test.c.s
-
-.PHONY : test/module1_test.s
-
-# target to generate assembly for a file
-test/module1_test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/test/module1_test.c.s
-.PHONY : test/module1_test.c.s
-
-unity/unity.o: unity/unity.c.o
-
-.PHONY : unity/unity.o
-
-# target to build an object file
-unity/unity.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/unity/unity.c.o
-.PHONY : unity/unity.c.o
-
-unity/unity.i: unity/unity.c.i
-
-.PHONY : unity/unity.i
-
-# target to preprocess a source file
-unity/unity.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/unity/unity.c.i
-.PHONY : unity/unity.c.i
-
-unity/unity.s: unity/unity.c.s
-
-.PHONY : unity/unity.s
-
-# target to generate assembly for a file
-unity/unity.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModuleTest.dir/build.make CMakeFiles/ModuleTest.dir/unity/unity.c.s
-.PHONY : unity/unity.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -271,20 +216,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Module"
 	@echo "... ModuleTest"
 	@echo "... MyProject"
+	@echo "... Unity"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/module1.o"
-	@echo "... src/module1.i"
-	@echo "... src/module1.s"
-	@echo "... test/module1_test.o"
-	@echo "... test/module1_test.i"
-	@echo "... test/module1_test.s"
-	@echo "... unity/unity.o"
-	@echo "... unity/unity.i"
-	@echo "... unity/unity.s"
 .PHONY : help
 
 

@@ -62,6 +62,13 @@ void test_square_negative_large(void)
     TEST_ASSERT_EQUAL_INT(25000000, result);
 }
 
+// Test case 8: Dummy Test
+void dummyTest(void)
+{
+    int result = square(-5000);
+    TEST_ASSERT_EQUAL_INT(25000000, result);
+}
+
  
 // Entry point for the test runner
 int main(void)
@@ -75,6 +82,7 @@ int main(void)
     RUN_TEST(test_square_min_int);
     RUN_TEST(test_square_large);
     RUN_TEST(test_square_negative_large);
+    RUN_TEST(dummyTest);
 
     return UNITY_END(); // Clean up Unity test framework
 }
