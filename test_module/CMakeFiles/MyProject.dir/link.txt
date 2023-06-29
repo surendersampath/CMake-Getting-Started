@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/MyProject.dir/src/main.c.o -o MyProject  test_module/libModule.a 
